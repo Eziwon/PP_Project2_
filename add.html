@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        도서명 : <input type="text" id="name"><br>
+        저자 : <input type="text" id="auth"><br>
+        출판사 : <input type="text" id="publisher"><br>
+        출판년도 : <input type="date" id="date"><br>
+        가격 : <input type="number" id="price"><br>
+        책 분야 : <br>
+        <input type="radio" name="field1" value="domestic"> 국내도서
+        <input type="radio" name="field1" value="overseas"> 해외도서 <br>
+        <select name="field2">
+            <option value="">경제/경영</option>
+        </select><br>
+        재고 수량 : <input type="number" id="number"><br>
+        책 소개 : <textarea id="introduce"></textarea><br>
+        <input type="submit" value="save" id="save">
+    </form>
+</body>
+</html>
