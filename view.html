@@ -4,8 +4,379 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --bs-body-font-family: var(--bs-font-sans-serif);
+            --bs-body-font-size: 1rem;
+            --bs-body-font-weight: 400;
+            --bs-body-line-height: 1.5;
+            --bs-body-color: #212529;
+            --bs-body-bg:#fff
+        }
+        body {
+            margin: 0;
+            font-family: var(--bs-body-font-family);
+            font-size: var(--bs-body-font-size);
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            color: var(--bs-body-color);
+            text-align: var(--bs-body-text-align);
+            background-color: var(--bs-body-bg);
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color:transparent
+        }
+
+        .container1 {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, .75rem);
+            padding-left: var(--bs-gutter-x, .75rem);
+            margin-right: auto;
+            margin-left:auto
+        }
+
+        .d-flex {
+            display:flex !important
+        }
+
+        .flex-wrap {
+            flex-wrap:wrap !important
+        }
+
+        .justify-content-center {
+            justify-content:center !important
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom:1rem !important
+        }
+
+        .mb-4 {
+            margin-bottom:1.5rem !important
+        }
+
+        .border-bottom {
+            border-bottom:1px solid #dee2e6 !important
+        }
+
+        .align-items-center {
+            align-items:center !important
+        }
+
+        .mb-3 {
+            margin-bottom:1rem !important
+        }
+
+        .mb-md-0 {
+            margin-bottom:0 !important
+        }
+
+        .me-md-auto {
+            margin-right:auto !important
+        }
+
+        .text-dark {
+            --bs-text-opacity: 1;
+            color:rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important
+        }
+        
+        .text-decoration-none {
+            text-decoration:none !important
+        }
+
+        .me-2 {
+            margin-right:.5rem !important
+        }
+
+        .fs-4 {
+            font-size:calc(1.275rem + .3vw) !important
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style:none
+        }
+
+        .nav-pills .nav-link {
+            background: 0 0;
+            border: 0;
+            border-radius:.25rem
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff;
+            background-color:#0d6efd
+        }
+
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+            color: #0d6efd;
+            text-decoration: none;
+            transition:color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+        }
+
+        .nav-link:focus, .nav-link:hover {
+            color:#0a58ca
+        }
+
+        .nav-link.disabled {
+            color: #6c757d;
+            pointer-events: none;
+            cursor:default
+        }
+
+        .nav-pills .nav-link {
+            background: 0 0;
+            border: 0;
+            border-radius:.25rem
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff;
+            background-color:#0d6efd
+        }
+
+        .px-4 {
+    padding-right: 1.5rem !important;
+    padding-left:1.5rem !important
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom:3rem !important
+}
+
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom:3rem !important
+}
+
+.text-center {
+    text-align:center !important
+}
+
+.d-block {
+    display:block !important
+}
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left:auto !important
+}
+
+.mb-4 {
+    margin-bottom:1.5rem !important
+}
+
+.mb-5 {
+    margin-bottom:3rem !important
+}
+
+.display-4 {
+    font-weight: 300;
+    line-height:1.2
+}
+
+.fw-bold {
+    font-weight:700 !important
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left:auto;
+}
+
+.col-xxl-8 {
+        flex: 0 0 auto;
+        width:66.66666667%
+    }
+
+    .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left:calc(-.5 * var(--bs-gutter-x))
+}
+
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top:var(--bs-gutter-y)
+}
+
+.flex-lg-row-reverse {
+        flex-direction:row-reverse !important
+    }
+
+    .align-items-center {
+    align-items:center !important
+}
+
+.g-5, .gx-5 {
+    --bs-gutter-x:3rem
+}
+
+.g-5, .gy-5 {
+    --bs-gutter-y:3rem
+}
+
+.col-lg-6 {
+        flex: 0 0 auto;
+        width:50%
+    }
+
+    .lead {
+    font-size: 1.25rem;
+    font-weight:300
+}
+
+.d-grid {
+    display:grid !important
+}
+
+.gap-2 {
+    gap:.5rem !important
+}
+
+.d-sm-flex {
+        display:flex !important
+    }
+
+    .justify-content-sm-center {
+        justify-content:center !important
+    }
+
+    .btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition:color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.btn:hover {
+    color:#212529
+}
+
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+    pointer-events: none;
+    opacity:.65
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color:#0d6efd
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color:#0a58ca
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #0a58ca;
+    border-color:#0a53be
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color:#6c757d
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color:#6c757d
+}
+
+.btn-group-lg > .btn, .btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border-radius:.3rem
+}
+
+.edit {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+    </style>
+    <script>
+        function deleteConfirm() {
+            if(confirm("게시물을 삭제할까요?")) {
+                alert("게시물이 삭제되었습니다.");
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/463c2c9472.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <div class="container1">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4"><i class="fa-solid fa-book-open"></i> My Book</span>
+          </a>
     
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/add.html" class="nav-link">Add</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+    </div>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="/book1.jpg" alt="" width="300">
+        <h1 class="display-4 fw-bold"><u>기분이 태도가 되지 말자</u></h1><br>
+        <p class="lead">저자 : <b>김수현</b></p>
+        <p class="lead">출판사 : <b>하이스트</b></p>
+        <p class="lead">도서 분야 : <b>국내도서 / 시,에세이</b></p>
+        <p class="lead">발행일자 : <b>2022-11-25</b></p><br>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead"><u>책 소개</u></p>
+            <p class="lead mb-4"><i><b>"인생을 결정하는 건 바로 하루의 기분이다. 그날의 기분이 하루의 성과를 결정하고,하루의 성과들이 모여 미래를 만들고그 미래들이 곧 내 인생이 되기 때문이다. 감정을 조절하면 미래가 바뀐다."</b></i></p><br>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i> Edit</a></button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="deleteConfirm()"><i class="fa-solid fa-trash-can"></i> Delete</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
