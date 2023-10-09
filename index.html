@@ -4,9 +4,352 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <style>
+        :root {
+            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --bs-body-font-family: var(--bs-font-sans-serif);
+            --bs-body-font-size: 1rem;
+            --bs-body-font-weight: 400;
+            --bs-body-line-height: 1.5;
+            --bs-body-color: #212529;
+            --bs-body-bg:#fff
+        }
+        body {
+            margin: 0;
+            font-family: var(--bs-body-font-family);
+            font-size: var(--bs-body-font-size);
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            color: var(--bs-body-color);
+            text-align: var(--bs-body-text-align);
+            background-color: var(--bs-body-bg);
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color:transparent
+        }
+
+        a {
+            color: #0d6efd;
+            text-decoration:underline
+        }
+
+        a:hover {
+            color:#0a58ca
+        }
+
+        table {
+            caption-side: bottom;
+            border-collapse:collapse
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, .75rem);
+            padding-left: var(--bs-gutter-x, .75rem);
+            margin-right: auto;
+            margin-left:auto
+        }
+
+        .d-flex {
+            display:flex !important
+        }
+
+        .flex-wrap {
+            flex-wrap:wrap !important
+        }
+
+        .justify-content-center {
+            justify-content:center !important
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom:1rem !important
+        }
+
+        .mb-4 {
+            margin-bottom:1.5rem !important
+        }
+
+        .border-bottom {
+            border-bottom:1px solid #dee2e6 !important
+        }
+
+        .align-items-center {
+            align-items:center !important
+        }
+
+        .mb-3 {
+            margin-bottom:1rem !important
+        }
+
+        .mb-md-0 {
+            margin-bottom:0 !important
+        }
+
+        .me-md-auto {
+            margin-right:auto !important
+        }
+
+        .text-dark {
+            --bs-text-opacity: 1;
+            color:rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important
+        }
+        
+        .text-decoration-none {
+            text-decoration:none !important
+        }
+
+        .me-2 {
+            margin-right:.5rem !important
+        }
+
+        .fs-4 {
+            font-size:calc(1.275rem + .3vw) !important
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style:none
+        }
+
+        .nav-pills .nav-link {
+            background: 0 0;
+            border: 0;
+            border-radius:.25rem
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff;
+            background-color:#0d6efd
+        }
+
+        .nav-link {
+            display: block;
+            padding: .5rem 1rem;
+            color: #0d6efd;
+            text-decoration: none;
+            transition:color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+        }
+
+        .nav-link:focus, .nav-link:hover {
+            color:#0a58ca
+        }
+
+        .nav-link.disabled {
+            color: #6c757d;
+            pointer-events: none;
+            cursor:default
+        }
+
+        .nav-pills .nav-link {
+            background: 0 0;
+            border: 0;
+            border-radius:.25rem
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff;
+            background-color:#0d6efd
+        }
+
+        .memu {
+            overflow-x: auto;
+            -webkit-overflow-scrolling:touch;
+            width: 90%;
+            margin: auto;
+        }
+
+        .friendList {
+            overflow-x: auto;
+            -webkit-overflow-scrolling:touch;
+            width: 90%;
+            margin: auto;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling:touch;
+            width: 90%;
+            margin: auto;
+        }
+
+        .table {
+            --bs-table-bg: transparent;
+            --bs-table-accent-bg: transparent;
+            --bs-table-striped-color: #212529;
+            --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+            --bs-table-active-color: #212529;
+            --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+            --bs-table-hover-color: #212529;
+            --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            vertical-align: top;
+            border-color:#dee2e6;
+            text-align: center;
+        }
+
+        .table > tbody {
+            vertical-align:inherit
+        }
+
+        .table > thead {
+            vertical-align:bottom
+        }
+
+        .table > :not(:first-child) {
+            border-top:2px solid currentColor
+        }
+
+        .table > :not(caption) > * > * {
+            padding: .5rem .5rem;
+            background-color: var(--bs-table-bg);
+            border-bottom-width: 1px;
+            box-shadow:inset 0 0 0 9999px var(--bs-table-accent-bg)
+        }
+
+        .table-striped > tbody > tr:nth-of-type(odd) > * {
+            --bs-table-accent-bg: var(--bs-table-striped-bg);
+            color:var(--bs-table-striped-color)
+        }
+
+        .table-sm > :not(caption) > * > * {
+            padding:.25rem .25rem
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/463c2c9472.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>22100574 Jiwon Lee</h1><br>
-    <button type="button" onclick="location.href='./add.html'">ADD</button>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4"><i class="fa-solid fa-book-open"></i> My Book</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/add.html" class="nav-link">Add</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+    </div>
+
+    <div class="menu">
+        <div class="friendList">
+            <h2><i class="fa-solid fa-bookmark"></i> Book List</h2>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Publisher</th>
+              <th scope="col">Field</th>
+              <th scope="col">Published Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>기분이 태도가 되지 말자</td>
+              <td>김수현</td>
+              <td>하이스트</td>
+              <td>국내도서/시,에세이</td>
+              <td>2022-11-25</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>일론 머스크</td>
+              <td>월터 아이작슨</td>
+              <td>21세기북스</td>
+              <td>국내도서/경제,경영</td>
+              <td>2023-09-13</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>시대예보: 핵개인의 시대</td>
+              <td>송길영</td>
+              <td>교보문고</td>
+              <td>국내도서/경제,경영</td>
+              <td>2023-09-23</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>도둑맞은 집중력</td>
+              <td>요한 하리</td>
+              <td>어크로스</td>
+              <td>국내도서/인문</td>
+              <td>2023-04-28</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>지리의 힘</td>
+              <td>팀 마샬</td>
+              <td>사이</td>
+              <td>국내도서/정치,사회</td>
+              <td>2016-08-10</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>참을 수 없는 존재의 가벼움</td>
+              <td>밀란 쿤데라</td>
+              <td>민음사</td>
+              <td>국내도서/소설</td>
+              <td>2018-06-20</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>꽃을 보듯 너를 본다</td>
+              <td>나태주</td>
+              <td>지혜</td>
+              <td>국내도서/시,에세이</td>
+              <td>2020-11-30</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>하나님의 열심</td>
+              <td>박영선</td>
+              <td>무근검(남포교회출판부)</td>
+              <td>국내도서/종교</td>
+              <td>2017-12-29</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>퓨처 셀프</td>
+              <td>벤저민 하디</td>
+              <td>상상스퀘어</td>
+              <td>국내도서/자기계발</td>
+              <td>2023-08-30</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>촉진하는 밤</td>
+              <td>김소연</td>
+              <td>문학과지성사</td>
+              <td>국내도서/시,에세이</td>
+              <td>2023-09-14</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 </body>
 </html>
