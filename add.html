@@ -197,7 +197,7 @@
         }
 
         .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-            width: 300px;
+            width: 500px;
             padding-right: var(--bs-gutter-x, .75rem);
             padding-left: var(--bs-gutter-x, .75rem);
             margin: auto;
@@ -421,6 +421,12 @@
                 alert("Published Date를 선택하세요.")
                 return false;
             }
+
+            var introduction = document.form1.introduction.value;
+            if (introduction === "") {
+                alert("Book Introduction을 입력하세요.")
+                return false;
+            }
             
             alert("게시물이 추가됩니다.")
             return true;
@@ -460,12 +466,12 @@
 
                     <div class="col-12">
                         <label for="author" class="form-label">Author</label>
-                        <input type="text" class="form-control" id="author" placeholder="" value="">
+                        <input type="text" class="form-control" id="author" name="author" placeholder="" value="">
                     </div>
 
                     <div class="col-12">
                         <label for="publisher" class="form-label">Publisher</label>
-                        <input type="text" class="form-control" id="publisher" placeholder="" value="">
+                        <input type="text" class="form-control" id="publisher" name="publisher" placeholder="" value="">
                     </div>
 
                     <div class="col-md-6">
@@ -495,6 +501,11 @@
                     <div class="col-12">
                         <label for="date" class="form-label">Published Date</label>
                         <input type="date" class="form-control" id="date" placeholder="" value="">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="introduction" class="form-label">Book Introduction</label>
+                        <textarea class="form-control" id="introduction"></textarea>
                     </div>
                 </div>
 
