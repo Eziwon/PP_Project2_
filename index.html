@@ -80,7 +80,23 @@
         .view:hover {
             color:#6c757d;
         }
+
+        .edit {
+            color: #000;
+        }
+        
+        .fa-trash-can:hover {
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function deleteConfirm() {
+            if(confirm("게시물을 삭제할까요?")) {
+                alert("게시물이 삭제되었습니다.");
+                window.location.href = "/"
+            }
+        }
+    </script>
     <script src="https://kit.fontawesome.com/463c2c9472.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -114,7 +130,7 @@
               <th scope="col">Author</th>
               <th scope="col">Publisher</th>
               <th scope="col">Field</th>
-              <th scope="col">Published Date</th>
+              <th scope="col">Menu</th>
             </tr>
           </thead>
           <tbody>
@@ -124,7 +140,7 @@
               <td>김수현</td>
               <td>하이스트</td>
               <td>국내도서/시,에세이</td>
-              <td>2022-11-25</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>2</td>
@@ -132,7 +148,7 @@
               <td>월터 아이작슨</td>
               <td>21세기북스</td>
               <td>국내도서/경제,경영</td>
-              <td>2023-09-13</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>3</td>
@@ -140,7 +156,7 @@
               <td>송길영</td>
               <td>교보문고</td>
               <td>국내도서/경제,경영</td>
-              <td>2023-09-23</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>4</td>
@@ -148,7 +164,7 @@
               <td>요한 하리</td>
               <td>어크로스</td>
               <td>국내도서/인문</td>
-              <td>2023-04-28</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>5</td>
@@ -156,7 +172,7 @@
               <td>팀 마샬</td>
               <td>사이</td>
               <td>국내도서/정치,사회</td>
-              <td>2016-08-10</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>6</td>
@@ -164,7 +180,7 @@
               <td>밀란 쿤데라</td>
               <td>민음사</td>
               <td>국내도서/소설</td>
-              <td>2018-06-20</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>7</td>
@@ -172,7 +188,7 @@
               <td>나태주</td>
               <td>지혜</td>
               <td>국내도서/시,에세이</td>
-              <td>2020-11-30</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>8</td>
@@ -180,7 +196,7 @@
               <td>박영선</td>
               <td>무근검(남포교회출판부)</td>
               <td>국내도서/종교</td>
-              <td>2017-12-29</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>9</td>
@@ -188,7 +204,7 @@
               <td>벤저민 하디</td>
               <td>상상스퀘어</td>
               <td>국내도서/자기계발</td>
-              <td>2023-08-30</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
             <tr>
               <td>10</td>
@@ -196,7 +212,7 @@
               <td>김소연</td>
               <td>문학과지성사</td>
               <td>국내도서/시,에세이</td>
-              <td>2023-09-14</td>
+              <td><a href="/edit.html" class="edit"><i class="fa-solid fa-pencil"></i></a> <i class="fa-solid fa-trash-can" onclick="deleteConfirm()"></i></td>
             </tr>
           </tbody>
         </table>
