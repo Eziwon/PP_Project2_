@@ -144,13 +144,6 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .form-me {
-        width: 100%;
-        margin: auto;
-    }
-}
-
 @media (min-width: 992px) {
     .col-lg-8 {
         flex: 0 0 auto;
@@ -162,10 +155,13 @@
     .mb-md-0 {
         margin-bottom:0 !important
     }
-}
 
-@media (min-width: 768px) {
     .me-md-auto {
         margin-right:auto !important
+    }
+
+    .col-md-4 {
+        flex: 0 0 auto;
+        width:33.33333333%
     }
 }
