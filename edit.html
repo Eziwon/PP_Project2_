@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="rwd" href="/my.css">
     <style>
         :root {
             --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -188,14 +189,6 @@
             background-color:#0d6efd
         }
 
-        .container1 {
-            width: 500px;
-            padding-right: var(--bs-gutter-x, .75rem);
-            padding-left: var(--bs-gutter-x, .75rem);
-            margin: auto;
-
-        }
-
         h4 {
             margin-bottom:1rem !important;
             margin-top: 0;
@@ -210,9 +203,8 @@
             --bs-gutter-y: 0;
             display: flex;
             flex-wrap: wrap;
-            margin-top: calc(-1 * var(--bs-gutter-y));
-            margin-right: calc(-.5 * var(--bs-gutter-x));
-            margin-left:calc(-.5 * var(--bs-gutter-x))
+            margin: auto;
+            width: 500px;
         }
 
         .row > * {
@@ -450,7 +442,7 @@
         </header>
     </div>
 
-    <div class="container1">
+    <div class="container">
         <div class="row g-5">
             <h4><i class="fa-solid fa-gear"></i> Edit Book</h4>
             <form name="form1" method="get" onsubmit="return checkValidation()">
