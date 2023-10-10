@@ -289,33 +289,29 @@
             opacity:.65
         }
 
-        .btn-primary {
+        .edit {
+            text-decoration: none;
             color: #fff;
+        }
+
+        .btn-primary {
             background-color: #0d6efd;
             border-color:#0d6efd
         }
 
         .btn-primary:hover {
-            color: #fff;
             background-color: #0b5ed7;
             border-color:#0a58ca
         }
 
-        .btn-primary:active {
-            color: #fff;
-            background-color: #0a58ca;
-            border-color:#0a53be
-        }
-
         .btn-outline-secondary {
+            border-color:#6c757d;
             color: #6c757d;
-            border-color:#6c757d
         }
 
         .btn-outline-secondary:hover {
-            color: #fff;
-            background-color: #6c757d;
-            border-color:#6c757d
+            background-color: #dee2e6;
+            color: #6c757d;
         }
 
         .btn-group-lg > .btn, .btn-lg {
@@ -323,16 +319,12 @@
             font-size: 1.25rem;
             border-radius:.3rem
         }
-
-        .edit {
-            text-decoration: none;
-            color: #fff;
-        }
     </style>
     <script>
         function deleteConfirm() {
             if(confirm("게시물을 삭제할까요?")) {
                 alert("게시물이 삭제되었습니다.");
+                window.location.href = "/"
             }
         }
     </script>

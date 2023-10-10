@@ -428,7 +428,11 @@
                 return false;
             }
             
-            alert("게시물이 추가됩니다.")
+            if(!confirm("게시물을 수정할까요?")) {
+                return false;
+            }
+
+            alert("게시물이 수정되었습니다.")
             return true;
         }
 
@@ -456,29 +460,29 @@
 
     <div class="container">
         <div class="row g-5">
-            <h4><i class="fa-solid fa-book"></i> Add New Book</h4>
+            <h4><i class="fa-solid fa-gear"></i> Edit Book</h4>
             <form name="form1" method="get" onsubmit="return checkValidation()">
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="" value="">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="" value="기분이 태도가 되지 말자">
                     </div>
 
                     <div class="col-12">
                         <label for="author" class="form-label">Author</label>
-                        <input type="text" class="form-control" id="author" name="author" placeholder="" value="">
+                        <input type="text" class="form-control" id="author" name="author" placeholder="" value="김수현">
                     </div>
 
                     <div class="col-12">
                         <label for="publisher" class="form-label">Publisher</label>
-                        <input type="text" class="form-control" id="publisher" name="publisher" placeholder="" value="">
+                        <input type="text" class="form-control" id="publisher" name="publisher" placeholder="" value="하이스트">
                     </div>
 
                     <div class="col-md-6">
                         <label for="field1" class="form-label">Field1</label>
                         <select class="form-select" id="field1">
                             <option value="">Choose...</option>
-                            <option value="domestic">국내도서</option>
+                            <option value="domestic" selected>국내도서</option>
                             <option value="overseas">해외도서</option>
                         </select>
                     </div>
@@ -487,7 +491,7 @@
                         <label for="field2" class="form-label">Field2</label>
                         <select class="form-select" id="field2">
                             <option value="">Choose...</option>
-                            <option value="essay">시/에세이</option>
+                            <option value="essay" selected>시/에세이</option>
                             <option value="novel">소설</option>
                             <option value="economy">경제/경영</option>
                             <option value="society">정치/사회</option>
@@ -500,18 +504,18 @@
 
                     <div class="col-12">
                         <label for="date" class="form-label">Published Date</label>
-                        <input type="date" class="form-control" id="date" placeholder="" value="">
+                        <input type="date" class="form-control" id="date" placeholder="" value="2022-11-25">
                     </div>
 
                     <div class="col-12">
                         <label for="introduction" class="form-label">Book Introduction</label>
-                        <textarea class="form-control" id="introduction" rows="6px"></textarea>
+                        <textarea class="form-control" id="introduction" rows="6px">인생을 결정하는 건 바로 하루의 기분이다. 그날의 기분이 하루의 성과를 결정하고,하루의 성과들이 모여 미래를 만들고그 미래들이 곧 내 인생이 되기 때문이다. 감정을 조절하면 미래가 바뀐다.</textarea>
                     </div>
                 </div>
 
                 <hr class="my-4">
 
-                <button class="w-100 btn btn-primary btn-lg" type="submit">추가</button>
+                <button class="w-100 btn btn-primary btn-lg" type="submit"><i class="fa-solid fa-pen"></i> Edit</button>
             </form>
         </div>
     </div>
