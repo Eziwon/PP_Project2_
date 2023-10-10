@@ -150,3 +150,22 @@
         margin: auto;
     }
 }
+
+@media (min-width: 992px) {
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width:66.66666667%
+    }
+}
+
+@media (min-width: 768px) {
+    .mb-md-0 {
+        margin-bottom:0 !important
+    }
+}
+
+@media (min-width: 768px) {
+    .me-md-auto {
+        margin-right:auto !important
+    }
+}
