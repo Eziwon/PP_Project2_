@@ -15,7 +15,7 @@
 }
 
 @media (min-width: 576px) {
-    .container, .container-sm {
+    .container, .container-sm, .form-me {
         max-width:540px
     }
 }
