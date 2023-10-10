@@ -82,14 +82,6 @@
             cursor:pointer
         }
 
-        .container1 {
-            width: 100%;
-            padding-right: var(--bs-gutter-x, .75rem);
-            padding-left: var(--bs-gutter-x, .75rem);
-            margin-right: auto;
-            margin-left:auto
-        }
-
         .d-flex {
             display:flex !important
         }
@@ -196,7 +188,7 @@
             background-color:#0d6efd
         }
 
-        .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        .container1 {
             width: 500px;
             padding-right: var(--bs-gutter-x, .75rem);
             padding-left: var(--bs-gutter-x, .75rem);
@@ -428,7 +420,7 @@
                 return false;
             }
             
-            alert("게시물이 추가됩니다.")
+            alert("게시물이 추가되었습니다.");
             return true;
         }
 
@@ -437,7 +429,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container1">
+    <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
@@ -454,7 +446,7 @@
         </header>
     </div>
 
-    <div class="container">
+    <div class="container1">
         <div class="row g-5">
             <h4><i class="fa-solid fa-book"></i> Add New Book</h4>
             <form name="form1" method="get" onsubmit="return checkValidation()">
